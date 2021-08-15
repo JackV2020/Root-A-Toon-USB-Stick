@@ -2,11 +2,11 @@
 
 Software for rooting a (dutch/belgian) Toon/Boxx using software running from a USB stick only.
 
-Based on Root-A-Toon by Igor Ybema https://github.com/IgorYbema/Root-A-Toon.
+Based on Root-A-Toon from https://github.com/ToonSoftwareCollective/Root-A-Toon.
 
 I modified the 2 scripts root-toon.sh and activate-toon.sh so they run from Kali which can be booted from a USB stick.
 
-Like with the initiating scripts made by Igor, the actual rooting is done by the so called 'payload' scripts which are still maintained by Igor.
+Like with the original initiating scripts, the actual rooting is done by the so called 'payload' scripts which are still maintained on https://github.com/ToonSoftwareCollective/Root-A-Toon.
 
 I created the script setup_wifi.sh to simplify the sharing of the wired Internet connection of your computer over the Wi-Fi to your Toon.
 
@@ -55,7 +55,7 @@ This will generate 2 messages on your Toon and restart the GUI if the access is 
 ## Rooting
 
 To root the Toon yet you can issue ```sudo bash root-toon.sh root```<br>
-This will download the 'payload' as maintained by Igor Ybema and root your Toon with the latest version of his scripts.
+This will download the 'payload' as maintained on https://github.com/ToonSoftwareCollective/Root-A-Toon and root your Toon with the latest version of these scripts.
 
 ## Sending own payload
 
@@ -63,7 +63,7 @@ To send your own script as 'payload' to the Toon you can issue ```sudo bash root
 For demo purpose I included a payload file named 'check' which you can run by ```sudo bash root-toon.sh check```<br>
 This will generate 4 messages on your Toon if the access is succesfull. 
 
-Below is a direct copy of the explanation of Igor :
+Below is a direct copy of the explanation from https://github.com/ToonSoftwareCollective/Root-A-Toon:
 
 ## How is root access possible?
 The script intercepts Toon traffic as it is trying to create a VPN connection towards the Toon servicecenter. First it starts blocking port 443 which results in blocking this VPN access (and also other traffic, but that is not a problem during rooting). Next, the Toon will try to access the servicecenter (from 172.16.0.0/12 address space) over the normal network port (wlan0 interface on the Toon) because there is no more-specific route over a (non existing) VPN connection anymore. The script will see this traffic (using tcpdump) and will store the IP address for the servicecenter which the Toon wants to talk to.
