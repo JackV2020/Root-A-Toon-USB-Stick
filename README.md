@@ -2,7 +2,7 @@
 
 Software for rooting a (dutch/belgian) Toon/Boxx using software running from a USB stick only.
 
-Based on Root-A-Toon by Igor Ibema https://github.com/IgorYbema/Root-A-Toon.
+Based on Root-A-Toon by Igor Ybema https://github.com/IgorYbema/Root-A-Toon.
 
 I modified the 2 scripts root-toon.sh and activate-toon.sh so they run from Kali which can be booted from a USB stick.
 
@@ -55,7 +55,7 @@ This will generate 2 messages on your Toon and restart the GUI if the access is 
 ## Rooting
 
 To root the Toon yet you can issue ```sudo bash root-toon.sh root```<br>
-This will download the 'payload' as maintained by Igor Ibema and root your Toon with the latest version of his scripts.
+This will download the 'payload' as maintained by Igor Ybema and root your Toon with the latest version of his scripts.
 
 ## Sending own payload
 
