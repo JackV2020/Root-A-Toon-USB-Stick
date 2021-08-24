@@ -2,6 +2,8 @@
 
 Software for rooting a (dutch/belgian) Toon/Boxx using software running from a USB stick only.
 
+After rooting you don't need a subscription anymore and you have access to a ToonStore with a growing number of apps. For more technical people there is a possibility to ssh into the Toon if they want with username root and password toon.
+
 Based on Root-A-Toon from https://github.com/ToonSoftwareCollective/Root-A-Toon.
 
 I modified the 2 scripts root-toon.sh and activate-toon.sh so they run from Kali which can be booted from a USB stick.
