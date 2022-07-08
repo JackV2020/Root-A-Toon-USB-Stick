@@ -19,7 +19,16 @@ A 4 GB memory stick and a Windows/Linux/macOS/OS X computer with an Ethernet car
 Details for USB stick creation are available on https://www.kali.org/docs/usb.
 
 Summary to prepare a stick from Windows ( 1 time only ) :
- - download Kali live from https://www.kali.org/get-kali/#kali-live
+ - old instruction was : 
+    - download Kali live from https://www.kali.org/get-kali/#kali-live
+    - ( until I received an issue that ncat does not support -q option)
+ - new instruction what I did not test yet : 
+    - find a live image from a folder in http://old.kali.org/kali-images/
+    - based on my Kali version info from 'uname -a' :
+        - Linux kali 5.10.0-kali7-amd64 #1 SMP Debian 5.10.28-1kali1 (2021-04-12) x86_64 GNU/Linux
+    - I think a good start could be one of the live iso's from : 
+        - http://old.kali.org/kali-images/kali-2021.4/  
+        - probably   http://old.kali.org/kali-images/kali-2021.4/kali-linux-2021.4-live-amd64.iso
  - download rufus from https://rufus-portable.en.uptodown.com/windows
  - insert USB stick
  - start rufus

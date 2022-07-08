@@ -39,6 +39,7 @@ then
  echo ""
  echo "Rooting Toon"
  PAYLOAD="$PAYLOAD ; `curl -Nks https://raw.githubusercontent.com/ToonSoftwareCollective/Root-A-Toon/master/payload`"
+ PAYLOAD="$PAYLOAD ; echo \"Your Toon is rooted, username : root ; password : toon\" >> /qmf/www/rsrc/log"
 elif [ -f $1 ] 
 then
  clear
