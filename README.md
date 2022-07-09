@@ -24,11 +24,15 @@ Summary to prepare a stick from Windows ( 1 time only ) :
     - ( until I received an issue that ncat does not support -q option)
  - new instruction what I did not test yet : 
     - find a live image from a folder in http://old.kali.org/kali-images/
-    - based on my Kali version info from 'uname -a' :
-        - Linux kali 5.10.0-kali7-amd64 #1 SMP Debian 5.10.28-1kali1 (2021-04-12) x86_64 GNU/Linux
+    - based on my Kali version info from 'lsb_release -a' :
+        - No LSB modules are available.
+        - Distributor ID: Kali
+        - Description:    Kali GNU/Linux Rolling
+        - Release:        2021.2
+        - Codename:       kali-rolling
     - I think a good start could be one of the live iso's from : 
-        - http://old.kali.org/kali-images/kali-2021.4/  
-        - probably   http://old.kali.org/kali-images/kali-2021.4/kali-linux-2021.4-live-amd64.iso
+        - http://old.kali.org/kali-images/kali-2021.2/  
+        - probably   http://old.kali.org/kali-images/kali-2021.2/kali-linux-2021.2-live-amd64.iso
  - download rufus from https://rufus-portable.en.uptodown.com/windows
  - insert USB stick
  - start rufus
