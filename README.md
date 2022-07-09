@@ -19,10 +19,10 @@ A 4 GB memory stick and a Windows/Linux/macOS/OS X computer with an Ethernet car
 Details for USB stick creation are available on https://www.kali.org/docs/usb.
 
 Summary to prepare a stick from Windows ( 1 time only ) :
- - old instruction was : 
+ - old instruction was :
     - download Kali live from https://www.kali.org/get-kali/#kali-live
     - ( until I received an issue that ncat does not support -q option)
- - new instruction what I did not test yet : 
+ - new instruction what I did not test yet but was confirmed by issue sender :
     - find a live image from a folder in http://old.kali.org/kali-images/
     - based on my Kali version info from 'lsb_release -a' :
         - No LSB modules are available.
@@ -30,9 +30,10 @@ Summary to prepare a stick from Windows ( 1 time only ) :
         - Description:    Kali GNU/Linux Rolling
         - Release:        2021.2
         - Codename:       kali-rolling
-    - I think a good start could be one of the live iso's from : 
-        - http://old.kali.org/kali-images/kali-2021.2/  
-        - probably   http://old.kali.org/kali-images/kali-2021.2/kali-linux-2021.2-live-amd64.iso
+    - this is version 2021.2 but the issue sender confirmed it works for 2021.4
+    - so I think a good start could be one of the live iso's from :
+        - http://old.kali.org/kali-images/kali-2021.4/
+        - probably http://old.kali.org/kali-images/kali-2021.4/kali-linux-2021.4-live-amd64.iso
  - download rufus from https://rufus-portable.en.uptodown.com/windows
  - insert USB stick
  - start rufus
@@ -44,7 +45,7 @@ Summary to prepare a stick from Windows ( 1 time only ) :
 
 To root a Toon you need the stick with Kali you created before.
 So for every next time you want to root a Toon  :
- - boot from the Kali USB stick 
+ - boot from the Kali USB stick
     - ( you may need to enable USB boot in the BIOS )
     - press enter on the blue Kali startup menu
     - wait for Kali with menu bar at top of the screen
@@ -61,11 +62,11 @@ So for every next time you want to root a Toon  :
        now you are ready to root your Toon :
     - ./root-toon.sh<br>
       read and follow the instructions
-    
+
 ## Rooting test run
 
 To start a rooting test run which does not modify the Toon yet you can issue ```sudo bash root-toon.sh test```<br>
-This will generate 2 messages on your Toon and restart the GUI if the access is succesfull. 
+This will generate 2 messages on your Toon and restart the GUI if the access is succesfull.
 
 ## Rooting
 
@@ -76,7 +77,7 @@ This will download the 'payload' as maintained on https://github.com/ToonSoftwar
 
 To send your own script as 'payload' to the Toon you can issue ```sudo bash root-toon.sh yourpayloadfile```<br>
 For demo purpose I included a payload file named 'check' which you can run by ```sudo bash root-toon.sh check```<br>
-This will generate 4 messages on your Toon if the access is succesfull. 
+This will generate 4 messages on your Toon if the access is succesfull.
 
 Below is a direct copy of the explanation from https://github.com/ToonSoftwareCollective/Root-A-Toon:
 
@@ -95,4 +96,4 @@ Don't release the reset button while flashing is still busy because the Toon wil
 ## What if my Toon needs to be activated first?
 Without an activated toon you will not be able to root it using this script as you are unable to start the check for new software process. As rooted toons are not connected to the official service portal an activation should not be necesssary also. Only, there is currently no official way to activate a toon without contacting a supplier (like Eneco NL or Engie Belgium). A common method used by some rooted Toon owners is just to activate a toon with an official subscription and then end that subscription within a week so you don't pay anything.
 
-But there is another way to fool the toon to be activated. Use the activation script for this. If your toon is in the activation wizard, connect your toon to the wifi hotspot and let it connect to the internet. It will then show you an 'activate' button. From there start the activation script: ``sudo bash activate-toon.sh`` 
+But there is another way to fool the toon to be activated. Use the activation script for this. If your toon is in the activation wizard, connect your toon to the wifi hotspot and let it connect to the internet. It will then show you an 'activate' button. From there start the activation script: ``sudo bash activate-toon.sh``
