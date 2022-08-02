@@ -98,7 +98,7 @@ RESPONSE='HTTP/1.1 200 OK\n\n
 <action xmlns:u="http://schema.homeautomationeurope.com/quby" class="response" uuid="0429a450-bd0c-11e0-962b-0800200c9a66" destuuid="_DESTUUID_" destcommonname="_DESTCOMMONNAME_" requestid="_REQUESTID_" serviceid="urn:hcb-hae-com:serviceId:specific1">\n
   <u:GetUpgradeResponse xmlns:u="http://schema.homeautomationeurope.com/quby">\n
     <DoUpgrade>true</DoUpgrade>\n
-    <Ver>5.;curl 1.1|sh;;</Ver>\n
+    <Ver>7.;curl 1.1|sh;;</Ver>\n
     <Success>true</Success>\n
     <Reason>Success</Reason>\n
     <ReasonDetails>Success</ReasonDetails>\n
