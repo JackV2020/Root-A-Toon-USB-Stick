@@ -56,6 +56,13 @@ So for every next time you want to root a Toon  :
     - ./setup-wifi.sh<br>
        read and follow the instructions<br>
        connect your Toon to the Wi-Fi named ToonRouter<br>
+       no ToonRouter SSID ?<br>
+       note that it may take some time for the SSID to appear<br>
+       you can also test on your phone<br>
+       I have to stop the WiFi on my phone, wait 10-20 seconds,<br>
+       turn it on and wait for it to appear<br>
+       sometimes I do the disabling and enabling 3 times before I see it<br>
+       'patience is a virtue'<br>
        when you find out your Toon needs to be activated before you can root :
     - ./activate-toon.sh<br>
        read and follow the instructions<br>
