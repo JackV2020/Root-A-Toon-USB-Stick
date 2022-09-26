@@ -44,6 +44,7 @@ else
   echo ""
   echo "For the ease of things, remember your password : $1"
 fi
+nmcli connection up ToonRouter
 echo ""
 echo "Now you are sharing the Internet on the Wi-Fi of this computer."
 echo ""
