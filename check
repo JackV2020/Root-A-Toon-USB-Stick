@@ -1,9 +1,0 @@
-#!/bin/sh
-/qmf/bin/bxt -d :happ_usermsg -s Notification -n CreateNotification  -a type -v task -a subType -v notify -a text -v  " Just checking 1 " 2>/dev/null >/dev/null 
-sleep 2
-/qmf/bin/bxt -d :happ_usermsg -s Notification -n CreateNotification  -a type -v task -a subType -v notify -a text -v  " Just checking 2 " 2>/dev/null >/dev/null 
-sleep 2
-/qmf/bin/bxt -d :happ_usermsg -s Notification -n CreateNotification  -a type -v task -a subType -v notify -a text -v  " Just checking 3 " 2>/dev/null >/dev/null 
-sleep 2
-/qmf/bin/bxt -d :happ_usermsg -s Notification -n CreateNotification  -a type -v task -a subType -v notify -a text -v  " Just checking 4 " 2>/dev/null >/dev/null 
-sleep 2
